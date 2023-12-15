@@ -21,7 +21,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 class VigenereCipheringMachine {
   constructor(isDirect) {
-    reverse: isDirect === false ? true : false;
+    this.reverse = (isDirect === false ? true : false);
   }
   encrypt(message, key) {
     if (message === undefined || key === undefined) throw new Error('Incorrect arguments!');
